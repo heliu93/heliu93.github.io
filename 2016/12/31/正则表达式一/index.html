@@ -84,16 +84,22 @@
 
 
 
-<meta name="description" content="说起正则表达式，讲真，我第一次看到时感觉完全没办法理解，乱成一遭。于是抽时间在慕课网上自己学习关于正则表达式的知识，总结一下，与大家分享。一、正则表达式简介首先，正则表达式也就是Regular Expression，是使用单个字符串来描述、匹配一系列符合某个语法规则的字符串。简单讲就是：按照某种规则去匹配符合条件的字符串。https://regexper.com 正则表达式工具，非常直观，可以试试">
+<meta name="description" content="说起正则表达式，讲真，我第一次看到时感觉完全没办法理解，乱成一遭。于是抽时间在慕课网上自己学习关于正则表达式的知识，总结一下，与大家分享。
+一、正则表达式简介正则表达式也就是Regular Expression，是使用单个字符串来描述、匹配一系列符合某个语法规则的字符串。简单讲就是：按照某种规则去匹配符合条件的字符串。推荐一个正则表达式工具http://regexper.com ，它会将正则表达式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="正则表达式一">
 <meta property="og:url" content="http://yoursite.com/2016/12/31/正则表达式一/index.html">
 <meta property="og:site_name" content="He DouDou's Blog">
-<meta property="og:description" content="说起正则表达式，讲真，我第一次看到时感觉完全没办法理解，乱成一遭。于是抽时间在慕课网上自己学习关于正则表达式的知识，总结一下，与大家分享。一、正则表达式简介首先，正则表达式也就是Regular Expression，是使用单个字符串来描述、匹配一系列符合某个语法规则的字符串。简单讲就是：按照某种规则去匹配符合条件的字符串。https://regexper.com 正则表达式工具，非常直观，可以试试">
-<meta property="og:updated_time" content="2016-12-31T10:25:34.000Z">
+<meta property="og:description" content="说起正则表达式，讲真，我第一次看到时感觉完全没办法理解，乱成一遭。于是抽时间在慕课网上自己学习关于正则表达式的知识，总结一下，与大家分享。
+一、正则表达式简介正则表达式也就是Regular Expression，是使用单个字符串来描述、匹配一系列符合某个语法规则的字符串。简单讲就是：按照某种规则去匹配符合条件的字符串。推荐一个正则表达式工具http://regexper.com ，它会将正则表达式">
+<meta property="og:image" content="http://yoursite.com/../images/table1.png">
+<meta property="og:image" content="http://yoursite.com/../images/table2.png">
+<meta property="og:updated_time" content="2017-01-04T06:19:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正则表达式一">
-<meta name="twitter:description" content="说起正则表达式，讲真，我第一次看到时感觉完全没办法理解，乱成一遭。于是抽时间在慕课网上自己学习关于正则表达式的知识，总结一下，与大家分享。一、正则表达式简介首先，正则表达式也就是Regular Expression，是使用单个字符串来描述、匹配一系列符合某个语法规则的字符串。简单讲就是：按照某种规则去匹配符合条件的字符串。https://regexper.com 正则表达式工具，非常直观，可以试试">
+<meta name="twitter:description" content="说起正则表达式，讲真，我第一次看到时感觉完全没办法理解，乱成一遭。于是抽时间在慕课网上自己学习关于正则表达式的知识，总结一下，与大家分享。
+一、正则表达式简介正则表达式也就是Regular Expression，是使用单个字符串来描述、匹配一系列符合某个语法规则的字符串。简单讲就是：按照某种规则去匹配符合条件的字符串。推荐一个正则表达式工具http://regexper.com ，它会将正则表达式">
+<meta name="twitter:image" content="http://yoursite.com/../images/table1.png">
 
 
 
@@ -341,7 +347,17 @@
       
 
       
-        <p>说起正则表达式，讲真，我第一次看到时感觉完全没办法理解，乱成一遭。于是抽时间在慕课网上自己学习关于正则表达式的知识，总结一下，与大家分享。<br>一、正则表达式简介<br>首先，正则表达式也就是Regular Expression，是使用单个字符串来描述、匹配一系列符合某个语法规则的字符串。简单讲就是：按照某种规则去匹配符合条件的字符串。<br><a href="https://regexper.com" target="_blank" rel="external">https://regexper.com</a> 正则表达式工具，非常直观，可以试试。</p>
+        <p>说起正则表达式，讲真，我第一次看到时感觉完全没办法理解，乱成一遭。于是抽时间在慕课网上自己学习关于正则表达式的知识，总结一下，与大家分享。</p>
+<p></p><h3>一、正则表达式简介</h3><br>正则表达式也就是Regular Expression，是使用单个字符串来描述、匹配一系列符合某个语法规则的字符串。简单讲就是：按照某种规则去匹配符合条件的字符串。<br>推荐一个正则表达式工具<a href="https://regexper.com" target="_blank" rel="external">http://regexper.com</a> ，它会将正则表达式转换为非常直观的图形表示，可以试试。<p></p>
+<p></p><h3>二、RegExp对象</h3><br>JavaScript通过内置对象RegExp支持正则表达式，有两种方法实例化RegExp对象：<br>（1）、字面量方法：<br>例：将is单词替换为IS<br>    var reg = /\bis\b/;<br>    ‘He is a boy.This is a dog.Where is she?’.replace(reg,’IS’)<br>运行结果：<br>     ‘He IS a boy.This is a dog.Where is she?’<br>（注：\b为单词边界）<br>（2）、构造函数：<br>var reg = new RegExp(‘\bis\b’,’g’);<br>（注：\转义）<p></p>
+<p>正则表达式的匹配模式支持下列3个标志，称之为修饰符：<br>（1）、g：global全文搜索，不添加的话，搜索到第一个匹配停止<br>（2）、i：ignore case忽略大小写，默认大小写敏感<br>（3）、m：multiple lines多行搜索</p>
+<p></p><h3>三、元字符</h3><br>正则表达式由两种基本字符类型组成：原义文本字符（代表它本身含义的字符）和元字符（在正则表达式中有特殊含义的非字母字符，如：* + ？$ ^ . |  \  ( ) { } [ ]）<br>下面列出部分元字符:<br>\t ：水平制表符<br>\v：垂直制表符<br>\n：换行符<br>\r：回车符<br>\0：空字符<br>\f：换页符<br>\cX：与X对应的控制字符（Ctrl+X）<p></p>
+<p></p><h3>四、字符类</h3><br>场景：一般情况下正则表达式一个字符对应字符串的一个字符，如ab\t，假设一下，如果我们需要一类字符呢，比如要求匹配字母a或b或c呢，这个时候使用字符类就比较方便了！<br>使用元字符[]来构建一个简单的类；所谓类是指符合某些特性的对象，一个泛指，而不是特指某个字符；表达式[abc]把字符a或b或c归为一类，表达式可以匹配这类的字符。<br>例：’a1b2c3d3’.replace(/[abc]/g,’X’)  运行结果为’X1X2X3d4’<p></p>
+<p>字符类取反：使用元字符^创建反向类（负向类）；反向类的意思是不属于某类的内容；表达式[^abc]表示 不是字符a或b或c的内容 例：’a1b2c3d3’.replace(/[^abc]/g,’X’)  结果为’aXbXcXXX’</p>
+<p></p><h3>五、范围类</h3><br>范围类用于匹配两个字符之间的内容。可以使用[a-z]来连接两个字符表示从a到z的任意字符，这是个闭区间，也就是包含a和z本身<br>例：’a1b2d3x4z9’.replace(/[a-z]/g,’Q’)<br>结果：’Q1Q2Q3Q4Q9’<br>在[]组成的类内部是可以连写的，如[a-zA-Z]。<br>例：’a1b2d3x4z9ACD’.replace(/[a-z]/g,’Q’)<br>结果为：’Q1Q2Q3Q4Q9QQQ’<p></p>
+<p></p><h3>五、JS预定义类及边界</h3><br>正则表达式提供预定义类来匹配常见的字符类，如下表：<br><img src="../images/table1.png" alt="预定义类"><br>例：匹配一个ab+数字+任意字符的字符串，可以写成： ab\d.<p></p>
+<p>边界匹配字符，如下表：<br><img src="../images/table2.png" alt="边界匹配字符"></p>
+<p>以上就是正则表达式的部分内容，明天就是2017年1月1号啦，祝大家新年快乐，工作顺顺利利哒~</p>
 
       
     </div>
@@ -429,8 +445,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/img_1.jpg"
@@ -484,6 +509,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">一、正则表达式简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">二、RegExp对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">三、元字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">四、字符类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">五、范围类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">6.</span> <span class="nav-text">五、JS预定义类及边界</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
     </div>
   </aside>
@@ -500,7 +541,7 @@
 <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
