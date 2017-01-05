@@ -249,6 +249,145 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/05/正则表达式二/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="HE LIU">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/img_1.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="He DouDou's Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="He DouDou's Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/01/05/正则表达式二/" itemprop="url">
+                  正则表达式二
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-05T17:33:40+08:00">
+                2017-01-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在上篇博客中记录了一些正则表达式的知识，接下来继续正则表达式的探索之旅吧！</p>
+<p></p><h3>一、量词</h3><br>假设场景：我们希望匹配一个连续出现20次的数字字符串，要写成\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d吗，这样就有点麻烦了，所以正则表达式用量词来解决这个问题。<br><img src="http://ojabox9sd.bkt.clouddn.com/table4.png" alt="量词"><br>使用正则表达式工具可以直观的解释上表含义，\d表示数字字符，如下： <img src="http://ojabox9sd.bkt.clouddn.com/measureWord1.png" alt="数字"><br>\d? 表示出现零次或一次（最多一次） <img src="http://ojabox9sd.bkt.clouddn.com/measureWord2.png" alt=""><br>\d+ 表示出现一次或多次（至少一次） <img src="http://ojabox9sd.bkt.clouddn.com/measureWord3.png" alt=""><br>\d* 表示出现零次或多次（任意次） <img src="http://ojabox9sd.bkt.clouddn.com/measureWord4.png" alt=""><br>\d{5} 表示出现5次 <img src="http://ojabox9sd.bkt.clouddn.com/measureWord6.png" alt=""><br>\d{5,10} 表示出现5到10次 <img src="http://ojabox9sd.bkt.clouddn.com/measureWord5.png" alt=""><br>\d(5,) 表示至少出现5次 <img src="http://ojabox9sd.bkt.clouddn.com/measureWord8.png" alt=""><br>\d(0,10) 表示最多10次 <img src="http://ojabox9sd.bkt.clouddn.com/mearsureWord7.png" alt=""><br>这样我们开头提出的问题就很好解决啦，匹配数字连续出现20次的场景，\d{20}就可以了。<p></p>
+<p>看一个复杂的表达式\d{20}\w\d?\w+\d*\d{3}\w{3,5}\d{3,} 用正则表达式工具解释为：<br><img src="http://ojabox9sd.bkt.clouddn.com/measureWord9.png" alt="">是不是很直观呢。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/31/正则表达式一/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -356,7 +495,8 @@
 <p>字符类取反：使用元字符^创建反向类（负向类）；反向类的意思是不属于某类的内容；表达式[^abc]表示 不是字符a或b或c的内容 例：’a1b2c3d3’.replace(/[^abc]/g,’X’)  结果为’aXbXcXXX’</p>
 <p></p><h3>五、范围类</h3><br>范围类用于匹配两个字符之间的内容。可以使用[a-z]来连接两个字符表示从a到z的任意字符，这是个闭区间，也就是包含a和z本身<br>例：’a1b2d3x4z9’.replace(/[a-z]/g,’Q’)<br>结果：’Q1Q2Q3Q4Q9’<br>在[]组成的类内部是可以连写的，如[a-zA-Z]。<br>例：’a1b2d3x4z9ACD’.replace(/[a-z]/g,’Q’)<br>结果为：’Q1Q2Q3Q4Q9QQQ’<p></p>
 <p></p><h3>五、JS预定义类及边界</h3><br>正则表达式提供预定义类来匹配常见的字符类，如下表：<br><img src="http://ojabox9sd.bkt.clouddn.com/table1.png" alt="预定义类"><br>例：匹配一个ab+数字+任意字符的字符串，可以写成： ab\d.<p></p>
-<p>边界匹配字符，如下表：<br><img src="http://ojabox9sd.bkt.clouddn.com/table2.png" alt="边界匹配字符"></p>
+<p>边界匹配字符，如下表：<br><img src="http://ojabox9sd.bkt.clouddn.com/table2.png" alt="边界匹配字符"><br>例：’This is a boy’.replace(/is/g,’0’),结果为’Th0 0 a boy’<br>如果只想替换单词的话，这时候就需要加单词边界了，’This is a boy’.replace(/\bis\b/g,’0’),运行结果为’This 0 a boy’<br>（注：^放在[]内表示的是取反，如果不放在[]内则表示以XXX开始）<br>例：’@123@abc@’.replace(/@./g,’Q’)，结果为’Q223Qbc@’<br>‘@123@abc@’.replace(/^@./g,’Q’)，结果为’Q23@abc@’，只有在开头的@被替换了。$也是同样的意思。</p>
+<p>标识符m的应用：<br>例：’@123<br>@456<br>@789’.replace(/^@\d/g,’X’)，运行结果为’X23<br>@456<br>@789’<br>如果想要匹配每一行，则需加标识符m,：’@123<br>@456<br>@789’.replace(/^@\d/g,’X’)，运行结果为’X23<br>X56<br>X89’</p>
 <p>以上就是正则表达式的部分内容，明天就是2017年1月1号啦，祝大家新年快乐，工作顺顺利利哒~</p>
 
           
@@ -568,7 +708,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
