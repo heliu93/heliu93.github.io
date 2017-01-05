@@ -92,14 +92,14 @@
 <meta property="og:site_name" content="He DouDou's Blog">
 <meta property="og:description" content="说起正则表达式，讲真，我第一次看到时感觉完全没办法理解，乱成一遭。于是抽时间在慕课网上自己学习关于正则表达式的知识，总结一下，与大家分享。
 一、正则表达式简介正则表达式也就是Regular Expression，是使用单个字符串来描述、匹配一系列符合某个语法规则的字符串。简单讲就是：按照某种规则去匹配符合条件的字符串。推荐一个正则表达式工具http://regexper.com ，它会将正则表达式">
-<meta property="og:image" content="http://yoursite.com/../images/table1.png">
-<meta property="og:image" content="http://yoursite.com/../images/table2.png">
-<meta property="og:updated_time" content="2017-01-04T06:19:57.000Z">
+<meta property="og:image" content="http://ojabox9sd.bkt.clouddn.com/table1.png">
+<meta property="og:image" content="http://ojabox9sd.bkt.clouddn.com/table2.png">
+<meta property="og:updated_time" content="2017-01-05T02:30:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正则表达式一">
 <meta name="twitter:description" content="说起正则表达式，讲真，我第一次看到时感觉完全没办法理解，乱成一遭。于是抽时间在慕课网上自己学习关于正则表达式的知识，总结一下，与大家分享。
 一、正则表达式简介正则表达式也就是Regular Expression，是使用单个字符串来描述、匹配一系列符合某个语法规则的字符串。简单讲就是：按照某种规则去匹配符合条件的字符串。推荐一个正则表达式工具http://regexper.com ，它会将正则表达式">
-<meta name="twitter:image" content="http://yoursite.com/../images/table1.png">
+<meta name="twitter:image" content="http://ojabox9sd.bkt.clouddn.com/table1.png">
 
 
 
@@ -355,8 +355,8 @@
 <p></p><h3>四、字符类</h3><br>场景：一般情况下正则表达式一个字符对应字符串的一个字符，如ab\t，假设一下，如果我们需要一类字符呢，比如要求匹配字母a或b或c呢，这个时候使用字符类就比较方便了！<br>使用元字符[]来构建一个简单的类；所谓类是指符合某些特性的对象，一个泛指，而不是特指某个字符；表达式[abc]把字符a或b或c归为一类，表达式可以匹配这类的字符。<br>例：’a1b2c3d3’.replace(/[abc]/g,’X’)  运行结果为’X1X2X3d4’<p></p>
 <p>字符类取反：使用元字符^创建反向类（负向类）；反向类的意思是不属于某类的内容；表达式[^abc]表示 不是字符a或b或c的内容 例：’a1b2c3d3’.replace(/[^abc]/g,’X’)  结果为’aXbXcXXX’</p>
 <p></p><h3>五、范围类</h3><br>范围类用于匹配两个字符之间的内容。可以使用[a-z]来连接两个字符表示从a到z的任意字符，这是个闭区间，也就是包含a和z本身<br>例：’a1b2d3x4z9’.replace(/[a-z]/g,’Q’)<br>结果：’Q1Q2Q3Q4Q9’<br>在[]组成的类内部是可以连写的，如[a-zA-Z]。<br>例：’a1b2d3x4z9ACD’.replace(/[a-z]/g,’Q’)<br>结果为：’Q1Q2Q3Q4Q9QQQ’<p></p>
-<p></p><h3>五、JS预定义类及边界</h3><br>正则表达式提供预定义类来匹配常见的字符类，如下表：<br><img src="../images/table1.png" alt="预定义类"><br>例：匹配一个ab+数字+任意字符的字符串，可以写成： ab\d.<p></p>
-<p>边界匹配字符，如下表：<br><img src="../images/table2.png" alt="边界匹配字符"></p>
+<p></p><h3>五、JS预定义类及边界</h3><br>正则表达式提供预定义类来匹配常见的字符类，如下表：<br><img src="http://ojabox9sd.bkt.clouddn.com/table1.png" alt="预定义类"><br>例：匹配一个ab+数字+任意字符的字符串，可以写成： ab\d.<p></p>
+<p>边界匹配字符，如下表：<br><img src="http://ojabox9sd.bkt.clouddn.com/table2.png" alt="边界匹配字符"></p>
 <p>以上就是正则表达式的部分内容，明天就是2017年1月1号啦，祝大家新年快乐，工作顺顺利利哒~</p>
 
       
