@@ -102,7 +102,13 @@
 <meta property="og:image" content="http://ojabox9sd.bkt.clouddn.com/measureWord8.png">
 <meta property="og:image" content="http://ojabox9sd.bkt.clouddn.com/mearsureWord7.png">
 <meta property="og:image" content="http://ojabox9sd.bkt.clouddn.com/measureWord9.png">
-<meta property="og:updated_time" content="2017-01-05T10:36:33.000Z">
+<meta property="og:image" content="http://ojabox9sd.bkt.clouddn.com/mearsureWord_1.png">
+<meta property="og:image" content="http://ojabox9sd.bkt.clouddn.com/divideWords.png">
+<meta property="og:image" content="http://ojabox9sd.bkt.clouddn.com/or.png">
+<meta property="og:image" content="http://ojabox9sd.bkt.clouddn.com/divideOr.png">
+<meta property="og:image" content="http://ojabox9sd.bkt.clouddn.com/ignoreGroup1.png">
+<meta property="og:image" content="http://ojabox9sd.bkt.clouddn.com/qianzhan.png">
+<meta property="og:updated_time" content="2017-01-11T04:56:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正则表达式二">
 <meta name="twitter:description" content="在上篇博客中记录了一些正则表达式的知识，接下来继续正则表达式的探索之旅吧！
@@ -358,6 +364,12 @@
         <p>在上篇博客中记录了一些正则表达式的知识，接下来继续正则表达式的探索之旅吧！</p>
 <p></p><h3>一、量词</h3><br>假设场景：我们希望匹配一个连续出现20次的数字字符串，要写成\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d\d吗，这样就有点麻烦了，所以正则表达式用量词来解决这个问题。<br><img src="http://ojabox9sd.bkt.clouddn.com/table4.png" alt="量词"><br>使用正则表达式工具可以直观的解释上表含义，\d表示数字字符，如下： <img src="http://ojabox9sd.bkt.clouddn.com/measureWord1.png" alt="数字"><br>\d? 表示出现零次或一次（最多一次） <img src="http://ojabox9sd.bkt.clouddn.com/measureWord2.png" alt=""><br>\d+ 表示出现一次或多次（至少一次） <img src="http://ojabox9sd.bkt.clouddn.com/measureWord3.png" alt=""><br>\d* 表示出现零次或多次（任意次） <img src="http://ojabox9sd.bkt.clouddn.com/measureWord4.png" alt=""><br>\d{5} 表示出现5次 <img src="http://ojabox9sd.bkt.clouddn.com/measureWord6.png" alt=""><br>\d{5,10} 表示出现5到10次 <img src="http://ojabox9sd.bkt.clouddn.com/measureWord5.png" alt=""><br>\d(5,) 表示至少出现5次 <img src="http://ojabox9sd.bkt.clouddn.com/measureWord8.png" alt=""><br>\d(0,10) 表示最多10次 <img src="http://ojabox9sd.bkt.clouddn.com/mearsureWord7.png" alt=""><br>这样我们开头提出的问题就很好解决啦，匹配数字连续出现20次的场景，\d{20}就可以了。<p></p>
 <p>看一个复杂的表达式\d{20}\w\d?\w+\d*\d{3}\w{3,5}\d{3,} 用正则表达式工具解释为：<br><img src="http://ojabox9sd.bkt.clouddn.com/measureWord9.png" alt="">是不是很直观呢。</p>
+<p></p><h3>二、贪婪模式与非贪婪模式</h3><br>贪婪模式：<br>\d{3,6}可以匹配3到6次，那么正则表达式要按几次匹配呢？答案是按尽可能多的次匹配。<br>例：’12345678’.replace(/\d{3,6}/g,’X’)，结果为：’X78’。<br>非贪婪模式：让正则表达式尽可能少的匹配，也就是说一旦成功匹配不再继续尝试，就是非贪婪模式。在量词后面加上？就可以了。<br>例：’12345678’.replace(/\d{3,6}?/g,’X’)，结果为：’XX78’。<p></p>
+<p></p><h3>三、分组</h3><br>例：匹配字符串Byron连续出现3次的场景，用量词可能写成Byron{3}，但实际结果并不是像预期那样，如下图：<br><img src="http://ojabox9sd.bkt.clouddn.com/mearsureWord_1.png" alt=""><br>因为量词是作用于紧挨着它的，并不能作用于整个单词，那么如何让它作用于我们想要的圈定内容呢？用分组。<br>使用()可以达到分组的功能，使量词作用于分组，{Byron}{3}。如下图：<br><img src="http://ojabox9sd.bkt.clouddn.com/divideWords.png" alt=""><br>例：’a1b2c3d4’.replace(/([a-z]\d){3}/g,’X’)，结果为：’Xd4’。<p></p>
+<p></p><h4>或</h4><br>使用|可以达到或的效果，如Byron|Casper,<br><img src="http://ojabox9sd.bkt.clouddn.com/or.png" alt=""><br>‘ByronCasper’.replace(/Byron|Casper/g,’X’)，结果为’XX’。<br>Byr(on|Ca)sper,<br><img src="http://ojabox9sd.bkt.clouddn.com/divideOr.png" alt=""><br>‘ByronsperByrCasper’.replace(/Byr(on|Ca)sper/g,’X’)，结果为’XX’。<p></p>
+<p></p><h4>反向引用</h4><br>要求2017-01-04替换为01/04/2017<br>‘2017-01-04’.replace(/(\d{4})-(\d{2})-(\d{2})/g,’$2$3$1’)，结果为：01/04/2017<br>&amp;代表捕获的分组内容。<p></p>
+<p></p><h4>忽略分组</h4><br>不希望捕获某些分组，只需要在分组内加上?:就可以。<br>(?:Byron).(ok)，ok是第一个分组。<br><img src="http://ojabox9sd.bkt.clouddn.com/ignoreGroup1.png" alt=""><p></p>
+<p></p><h3>四、前瞻</h3><br>正则表达式从文本头部向尾部开始解析，文本尾部方向，称为“前”。文本头部方向，称为“后”。<br>前瞻就是在正则表达式匹配到规则的时候，向前检查是否符合断言，后顾/后瞻方向相反。<br>JavaScript不支持后顾。<br>符合和不符合特定断言称为肯定/正向匹配和否定/负向匹配。<br><img src="http://ojabox9sd.bkt.clouddn.com/qianzhan.png" alt=""><br>注：exp为正则部分（规则部分），assert为断言部分，比如\w(?=\d)，表示应该匹配单词字符后边有数字的情况，即满足两个条件：单词字符+数字才可以。<br>例：’a2*3’.replace(/\w(?=\d)/g,’X’)，结果为：’X2*3’。 只替换规则部分。<p></p>
 
       
     </div>
@@ -518,7 +530,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">一、量词</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">一、量词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">二、贪婪模式与非贪婪模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">三、分组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">3.1.</span> <span class="nav-text">或</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">3.2.</span> <span class="nav-text">反向引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">3.3.</span> <span class="nav-text">忽略分组</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">四、前瞻</span></a></li></ol></div>
             
 
           </div>
