@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="心情随笔," />
+  <meta name="keywords" content="正则表达式," />
 
 
 
@@ -84,22 +84,19 @@
 
 
 
-<meta name="description" content="Hello~我也终于有自己的博客啦！开心~
-以前每次看到大牛的技术博客，都觉得挺高大上的，羡慕值一万点。这个小博客出生于2016年12月19号，偶然降临(•̀ω•́)✧，是公司大腿看我在用印象笔记，他也刚好才搭了自己的博客，就让我用Github+Hexo+NexT建站了，嗯，就是这么简单粗暴。在大腿的帮助下，才能够顺利完成，谢谢你。
-个人感觉做技术静心专注很重要，内心不静，毛毛躁躁，根本就看不进去">
+<meta name="description" content="首先介绍两个正则表达式对象本身的方法
+test方法：RegExp.prototype.test(str)用于测试字符串参数中是否存在匹配正则表达式模式的字符串，如果存在则返回true，不存在则返回false。例：var reg1 = /\w/;reg1.test(‘a’)结果为true；reg1.test(‘$’)结果为false；注：全局情况下注意lastIndex，lastIndex是当前匹配">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一篇博客">
-<meta property="og:url" content="http://yoursite.com/2016/12/19/我的第一篇博客/index.html">
+<meta property="og:title" content="正则表达式方法">
+<meta property="og:url" content="http://yoursite.com/2017/01/16/正则表达式方法/index.html">
 <meta property="og:site_name" content="He DouDou's Blog">
-<meta property="og:description" content="Hello~我也终于有自己的博客啦！开心~
-以前每次看到大牛的技术博客，都觉得挺高大上的，羡慕值一万点。这个小博客出生于2016年12月19号，偶然降临(•̀ω•́)✧，是公司大腿看我在用印象笔记，他也刚好才搭了自己的博客，就让我用Github+Hexo+NexT建站了，嗯，就是这么简单粗暴。在大腿的帮助下，才能够顺利完成，谢谢你。
-个人感觉做技术静心专注很重要，内心不静，毛毛躁躁，根本就看不进去">
-<meta property="og:updated_time" content="2016-12-23T09:48:23.000Z">
+<meta property="og:description" content="首先介绍两个正则表达式对象本身的方法
+test方法：RegExp.prototype.test(str)用于测试字符串参数中是否存在匹配正则表达式模式的字符串，如果存在则返回true，不存在则返回false。例：var reg1 = /\w/;reg1.test(‘a’)结果为true；reg1.test(‘$’)结果为false；注：全局情况下注意lastIndex，lastIndex是当前匹配">
+<meta property="og:updated_time" content="2017-01-17T10:54:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的第一篇博客">
-<meta name="twitter:description" content="Hello~我也终于有自己的博客啦！开心~
-以前每次看到大牛的技术博客，都觉得挺高大上的，羡慕值一万点。这个小博客出生于2016年12月19号，偶然降临(•̀ω•́)✧，是公司大腿看我在用印象笔记，他也刚好才搭了自己的博客，就让我用Github+Hexo+NexT建站了，嗯，就是这么简单粗暴。在大腿的帮助下，才能够顺利完成，谢谢你。
-个人感觉做技术静心专注很重要，内心不静，毛毛躁躁，根本就看不进去">
+<meta name="twitter:title" content="正则表达式方法">
+<meta name="twitter:description" content="首先介绍两个正则表达式对象本身的方法
+test方法：RegExp.prototype.test(str)用于测试字符串参数中是否存在匹配正则表达式模式的字符串，如果存在则返回true，不存在则返回false。例：var reg1 = /\w/;reg1.test(‘a’)结果为true；reg1.test(‘$’)结果为false；注：全局情况下注意lastIndex，lastIndex是当前匹配">
 
 
 
@@ -127,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/12/19/我的第一篇博客/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/01/16/正则表达式方法/"/>
 
 
 
 
 
-  <title> 我的第一篇博客 | He DouDou's Blog </title>
+  <title> 正则表达式方法 | He DouDou's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -254,7 +251,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/19/我的第一篇博客/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/16/正则表达式方法/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="HE LIU">
@@ -278,7 +275,7 @@
             
             
               
-                我的第一篇博客
+                正则表达式方法
               
             
           </h1>
@@ -291,8 +288,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-19T19:30:30+08:00">
-                2016-12-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-16T11:31:43+08:00">
+                2017-01-16
               </time>
             
 
@@ -310,8 +307,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/心情随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">心情随笔</span>
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
                   </a>
                 </span>
 
@@ -347,10 +344,27 @@
       
 
       
-        <p>Hello~我也终于有自己的博客啦！开心~</p>
-<p>以前每次看到大牛的技术博客，都觉得挺高大上的，羡慕值一万点。这个小博客出生于2016年12月19号，偶然降临(•̀ω•́)✧，是公司大腿看我在用印象笔记，他也刚好才搭了自己的博客，就让我用Github+Hexo+NexT建站了，嗯，就是这么简单粗暴。在大腿的帮助下，才能够顺利完成，谢谢你。</p>
-<p>个人感觉做技术静心专注很重要，内心不静，毛毛躁躁，根本就看不进去代码，反之心无旁骛，效率则会高很多。写个人博客，<b style="color:#E76658">贵在坚持</b>，无论身处哪个行业，都希望自己能够坚持学习与进步。多多记录总结，既方便查阅，也但愿点滴积累提高自己，望小伙伴们也能多多查看，欢迎批评指正。</p>
-<p>就是这样了，博客之旅start！敬请期待~</p>
+        <p><b style="font-size:18px">首先介绍两个正则表达式对象本身的方法</b></p>
+<p></p><h4>test方法：</h4><br>RegExp.prototype.test(str)用于测试字符串参数中是否存在匹配正则表达式模式的字符串，如果存在则返回true，不存在则返回false。<br>例：<br>var reg1 = /\w/;<br>reg1.test(‘a’)结果为true；<br>reg1.test(‘$’)结果为false；<br>注：全局情况下注意lastIndex，lastIndex是当前匹配结果的最后一个字符的下一个字符。<p></p>
+<p></p><h4>exec方法：</h4><br>RegExp.prototype.exec(str)，使用正则表达式模式对字符串执行搜索，并将更新全局RegExp对象的属性以反映匹配结果，如果没有匹配的文本则返回null，否则返回一个结果数组:index声明匹配文本的第一个字符的位置，input存放被检索的字符串string。<br><b style="font-size:16px">非全局调用：</b><br>（1）、调用非全局的RegExp对象的exec时，返回数组。<br>（2）、第一个元素是与正则表达式相匹配的文本。<br>（3）、第二个元素是与RegExpObject的第一个子表达式相匹配的文本（如果有的话）。<br>（4）、第三个元素是与RegExpObject的第二个子表达式相匹配的文本（如果有的话）。<br>例：<br>var reg3 = /\d(\w)\d/;<br>var reg4 = /\d(\w)\d/g;<br>var ts = ‘1a2b3c4d5e’;<br>var ret = reg3.exec(ts);<br>console.log(reg3.lastIndex+’\t’+ret.index+’\t’+ret.toString());<br>结果为：’0  0  1a2,a’<br>解释：第一个为0，lastIndex在非全局情况下是不生效的；第二个为0，说明被匹配的第一个字符串的位置为0；结果数组ret为[‘1a2’,’a’]，参照以上4点可知，第一个元素是与正则表达式相匹配的文本1a2，第二个元素是与正则表达式对象的第一个子表达式相匹配的文本，<em>子表达式就是分组，小括号就能形成分组</em>，a表示的是分组内容。<br><b style="font-size:16px">全局调用：</b><br>例：<br>var reg4 = /\d(\w)(\w)\d/g;<br>var ts = ‘1az2bb3cy4dd5ee’;<br>while(ret = reg4.exec(ts)){<br>console.log(reg4.lastIndex+’\t’+ret.index+’\t’+ret.toString());<br>}<br>结果为：’5  1  1az2,a,z’<br>‘11  7  3cy4,c,y’。<br><b style="font-size:16px">总结</b>：用此方法可以方便的检测字符串是从哪个位置开始匹配的，匹配结果，分组内容等等。<p></p>
+<p><b style="font-size:18px">下面介绍字符串对象方法</b></p>
+<p></p><h4>search方法：</h4><br>String.prototype.search(reg)，search()方法用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串；方法返回第一个匹配结果index，查找不到返回-1；search()方法不执行全局匹配，它将忽略标志g，并且总是从字符串的开始进行检索。<br>例：<br>‘a1b2c3d1’.search(‘2’)，结果为3；<br>‘a1b2c3d1’.search(‘10’)，结果为-1；<br>‘a1b2c3d1’.search(/2/)，结果为3；<p></p>
+<p></p><h4>match方法：</h4><br>String.prototype.match(reg)，match()方法将检索字符串，以找到一个或多个与RegExp匹配的文本；RegExp是否具有标志g对结果影响很大。<br><b style="font-size:16px">非全局调用：</b><p></p>
+<blockquote>
+<p>如果RegExp没有标志g，那么match()方法就只能在字符串中执行一次匹配；<br>如果没有找到任何匹配的文本，将返回null；<br>否则它将返回一个数组，其中存放了与它找到的匹配文本有关的信息：</p>
+<blockquote>
+<p>返回数组的第一个元素存放的是匹配文本，而其余的元素存放的是与正则表达式的子表达式匹配的文本；<br>除了常规的数组元素之外，返回的数组还含有2个对象属性：index声明匹配文本的其实字符在字符串的位置，input声明对stringObject的引用。</p>
+</blockquote>
+</blockquote>
+<p>例：<br>var reg3 = /\d(\w)\d/;<br>var ts = ‘$1a2b3c4d5e’;<br>var ret = ts.match(reg3);<br>console.log(ret);<br>console.log(ret.index+’\t’+reg3.lastIndex);<br>结果为：[‘1a2’,’a’]<br>‘1  0’<br><b style="font-size:16px">全局调用：</b></p>
+<blockquote>
+<p>如果RegExp具有标志g则match()方法将执行全局检索，找到字符串中的所有匹配子字符串</p>
+<blockquote>
+<p>没有找到任何匹配的子串，则返回null<br>如果找到了一个或多个匹配子串，则返回一个数组</p>
+</blockquote>
+<p>数组元素中存放的是字符串中所有的匹配子串，而且也没有index属性或input属性。</p>
+</blockquote>
+<p>例：<br>var reg4 = /\d(\w)\d/g;<br>var ts = ‘$1a2b3c4d5e’;<br>var ret = ts.match(reg4);<br>console.log(ret);<br>console.log(ret.index+’\t’+reg4.lastIndex);<br>结果为：[‘1a2’,’3c4’]<br>‘undefined  0’</p>
 
       
     </div>
@@ -374,7 +388,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/心情随笔/" rel="tag"># 心情随笔</a>
+            <a href="/tags/正则表达式/" rel="tag"># 正则表达式</a>
           
         </div>
       
@@ -383,15 +397,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/01/05/正则表达式二/" rel="next" title="正则表达式二">
+                <i class="fa fa-chevron-left"></i> 正则表达式二
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/31/正则表达式一/" rel="prev" title="正则表达式一">
-                正则表达式一 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -438,8 +452,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/img_1.jpg"
@@ -492,6 +515,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">test方法：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">exec方法：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">search方法：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">match方法：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
